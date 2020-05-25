@@ -1,16 +1,30 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby from scratch`,
-    description: `Weibens awesome Gatsby tutorial site.`,
-    author: `@weibenfalk`,
+    title: `Gatsby blog`,
+    description: `A blog Jackie Calapristi made using Gatsby.`,
+    author: `@jackiecalapristi`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-reading-time`],
       },
     },
     `gatsby-transformer-sharp`,
