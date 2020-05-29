@@ -12,6 +12,5 @@ export const useMetaDataQuery = () => {
       }
     }
   `)
-
-  return data.site.siteMetaData;
+  return data.site.siteMetadata;
 };
