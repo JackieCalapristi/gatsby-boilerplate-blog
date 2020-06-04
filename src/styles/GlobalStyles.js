@@ -39,7 +39,7 @@ export const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'Muli Regular';
     src: local('Muli Regular'), local('MuliRegular'),
-      url(${MuliRegular}) format('woff');
+      url('${MuliRegular}') format('woff');
     font-weight: 300;
     font-style: normal;
   }
@@ -47,7 +47,7 @@ export const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'Muli Black';
     src: local('Muli Black'), local('MuliBlack'),
-      url(${MuliBlack}) format('woff');
+      url('${MuliBlack}') format('woff');
     font-weight: 300;
     font-style: normal;
   }
@@ -57,8 +57,8 @@ export const GlobalStyles = createGlobalStyle`
     color: ${props => props.theme.colors.textSecondary};
     font-family: "Muli Regular", Arial, Helvetica, sans-serif;
     margin: 0;
-    padding 0 20px 80px 20 px;
-    trasnition: all 0.5s ease;
+    padding: 0 20px 80px 20px;
+    transition: all 0.5s ease;
   }
 
   main {
