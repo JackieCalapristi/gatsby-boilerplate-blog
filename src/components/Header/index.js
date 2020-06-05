@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+// Components
+import Menu from 'components/Menu'
 // Hooks
 import { useSiteConfigQuery } from "hooks/useSiteConfigQuery"
 // Styles
@@ -10,9 +12,11 @@ const Header = ({ siteTitle = ``}) => {
   
   return (
     <Wrapper>
+      <Menu items={siteConfig.menu} />
       <Link to="/">
         <Logo src={siteConfig.logo.publicURL} alt={siteTitle} />
       </Link>
+      <div>Mode Button</div>
     </Wrapper>
   )
 }
