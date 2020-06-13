@@ -35,7 +35,13 @@ export const indexQuery = graphql`
           frontmatter {
             date
             title
-            slug
+            image {
+              childImageSharp {
+                fluid(maxWidth: 200, maxHeight: 200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           excerpt
         }
