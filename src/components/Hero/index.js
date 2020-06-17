@@ -5,6 +5,7 @@ import { duplicateVariableMessage } from "graphql/validation/rules/UniqueVariabl
 // Hooks
 import { useHeroQuery } from "hooks/useHeroQuery"
 // Styles
+import BGImage from "components/BGImage"
 
 const Hero = () => {
   const { 
@@ -16,15 +17,14 @@ const Hero = () => {
   console.log(heroImage);
   return (
     <div>
-      <div>
-        BG Image
-      </div>
-      <div>
-        <h2>{heroImageText}</h2>
-        <Link to={heroImageBtnLink}>
-          <button>{heroImageBtnText}</button>
-        </Link>
-      </div>
+      <BGImage title="heroImage" fluid={heroImage.childImageSharp.fluid}>
+        <div>
+          <h2>{heroImageText}</h2>
+          <Link to={heroImageBtnLink}>
+            <button>{heroImageBtnText}</button>
+          </Link>
+        </div>
+      </BGImage>
     </div>
   );
 };
