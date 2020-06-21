@@ -11,9 +11,8 @@ import {
   TextWrapper,
   StatWrapper,
   DateWrapper,
-  ReadingTimeWrapper
-} from './BlogPostCard.styles'
-
+  ReadingTimeWrapper,
+} from "./BlogPostCard.styles"
 
 const BlogPostCard = ({ slug, title, date, readingTime, excerpt, image }) => (
   <CardWrapper>
@@ -36,8 +35,7 @@ const BlogPostCard = ({ slug, title, date, readingTime, excerpt, image }) => (
       </StatWrapper>
       <p>{excerpt}</p>
     </TextWrapper>
-    
   </CardWrapper>
 )
 
-export default BlogPostCard;
+export default BlogPostCard

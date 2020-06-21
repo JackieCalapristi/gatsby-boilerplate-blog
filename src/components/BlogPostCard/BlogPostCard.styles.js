@@ -12,19 +12,19 @@ export const ImgWrapper = styled.div`
   margin: 0 20px 0 0;
 
   img {
-    border-raidus: 10px;
+    border-radius: 10px;
   }
 
-  @media screen and (min-widht: 768px) {
+  @media screen and (min-width: 768px) {
     display: block;
   }
 `
 
 export const TextWrapper = styled.div`
-  max-width: 800;
+  max-width: 800px;
 
   h2 {
-    maring: 0;
+    margin: 0;
   }
 `
 
@@ -37,17 +37,17 @@ export const StatWrapper = styled.div`
 const sharedStyle = css`
   display: flex;
   align-items: center;
-  margin-right: 200px;
-  font-family: 'Muli Black', Arial, Helvetica, sans-serif;
+  margin-right: 20px;
+  font-family: "Muli Black", Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
 
   img {
-    margin 0 10px 0 0 ;
+    margin: 0 10px 0 0;
   }
 `
 
 export const DateWrapper = styled.div`
-  ${sharedStyled}
+  ${sharedStyle}
 `
 
 export const ReadingTimeWrapper = styled.div`
