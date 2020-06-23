@@ -1,4 +1,4 @@
-import Reat, { useState } from "react"
+import React, { useState } from "react"
 
 export const ModeContext = React.createContext([])
 
