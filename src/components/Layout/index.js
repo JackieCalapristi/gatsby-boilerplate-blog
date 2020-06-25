@@ -1,17 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { ThemeProvider } from "styled-components"
 // Hooks
 import { useMetaDataQuery } from "hooks/useMetaDataQuery"
 // Components
 import Header from "components/Header"
+// Context
+import { ModeContext } from "context/ModeProvider"
 // Styles
 import { GlobalStyles, lightTheme, darkTheme } from 'styles/globalStyles'
 
 const Layout = ({ children }) => {
   const data = useMetaDataQuery();
-  console.log(data);
+  const [darkMode] = useContext(ModeContext);
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <GlobalStyles />
       <Header siteTitle={data.title} />
       {children}
