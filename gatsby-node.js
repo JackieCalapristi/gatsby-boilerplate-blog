@@ -20,6 +20,39 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
+exports.createPages = async ({ graphql, actions }) => {
+  const { creatPage } = actions
+  const content = await graphql(`
+    {
+      posts: allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "post" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              published
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+      pages: allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "pages" } } }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+} 
+
 // For absolute imports
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
