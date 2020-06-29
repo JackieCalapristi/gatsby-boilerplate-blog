@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 // Components
 import Layout from "components/Layout"
 import Image from "components/Image"
-import SEO from "compoennts/SEO"
+import SEO from "components/SEO"
 
 const Post = ({ data }) => {
   const post = data.markdownRemark;
@@ -13,7 +13,7 @@ const Post = ({ data }) => {
       <SEO title={post.frontmatter.title} />
       <Image fluid={post.frontmatter.image.childImageSharp.fluid} />
       <main>
-        <h2>{post.fontmatter.title}</h2>
+        <h2>{post.frontmatter.title}</h2>
         <div dangerouslySetInnerHTML={{__html: post.html}} />
       </main>
     </Layout>
