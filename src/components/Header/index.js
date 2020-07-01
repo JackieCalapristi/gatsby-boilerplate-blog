@@ -20,7 +20,7 @@ const Header = ({ siteTitle = ``}) => {
   return (
     <Wrapper>
       <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-     <MobileMenu menuOpen={menuOpen} items={siteConfig.menu} />
+      <MobileMenu menuOpen={menuOpen} items={siteConfig.menu} />
       <Menu items={siteConfig.menu} />
       <Link to="/">
         <Logo src={siteConfig.logo.publicURL} alt={siteTitle} />
