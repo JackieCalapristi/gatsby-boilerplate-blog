@@ -1,7 +1,7 @@
 ---
 type: 'hero'
 heroImage: '../images/hero-image.jpg'
-heroImageText: 'WHAT’S GOING ON?'
+heroImageText: 'WELCOME TO MY BLOG'
 heroImageBtnText: 'Read More'
 heroImageBtnLink: '/contact'
 ---
