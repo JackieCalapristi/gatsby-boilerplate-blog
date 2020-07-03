@@ -7,7 +7,7 @@ import Header from "components/Header"
 // Context
 import { ModeContext } from "context/ModeProvider"
 // Styles
-import { GlobalStyles, lightTheme, darkTheme } from 'styles/globalStyles'
+import { GlobalStyles, lightTheme, darkTheme } from 'styles/GlobalStyles'
 
 const Layout = ({ children }) => {
   const data = useMetaDataQuery();

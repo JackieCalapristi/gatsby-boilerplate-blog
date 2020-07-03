@@ -10,7 +10,6 @@ import PageNavigation from "components/PageNavigation";
 
 const IndexPage = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges
-  console.log(data)
   return (
     <Layout>
       <SEO title = "Home" />
