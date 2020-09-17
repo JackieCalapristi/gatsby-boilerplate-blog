@@ -1,5 +1,5 @@
 # Gatsby Boilerplate Blog App 
-This boilerplate blog is powered by Gatsby, Netlify, React Hooks, the Context API, GraphQL, and styled components.  I made this for fun to learn about Gatsby.
+This boilerplate blog is powered by Gatsby, Netlify, React Hooks, the Context API, GraphQL, and styled components.  Fork this and create the blog of your dreams!
 
 # Live Site Here
 https://gatsby-boilerplate-blog.netlify.app/
